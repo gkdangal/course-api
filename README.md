@@ -5,17 +5,17 @@
 # I am ging to mension what are the dependencies packages on 
 - We need Two dependencies packages to run spring boot application on docker
 1. <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-tomcat -->
-		  <dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-tomcat</artifactId>
-    		<version>1.5.9.RELEASE</version>
+		<dependency>
+    			<groupId>org.springframework.boot</groupId>
+    			<artifactId>spring-boot-starter-tomcat</artifactId>
+    			<version>1.5.9.RELEASE</version>
 		</dependency>
 		
 2. <!-- https://mvnrepository.com/artifact/tomcat/jasper-runtime -->
 		<dependency>
-    		<groupId>tomcat</groupId>
-    		<artifactId>jasper-runtime</artifactId>
-    		<version>5.5.23</version>
+    			<groupId>tomcat</groupId>
+    			<artifactId>jasper-runtime</artifactId>
+    			<version>5.5.23</version>
 		</dependency>
 
 
@@ -33,27 +33,27 @@
 	</build>
 4. we have to create Docker file and add these command
 
-FROM openjdk:8u151-jdk
-ADD /target/course-api-docker.jar course-api-docker.jar
-RUN bash -c 'touch /course-api-docker.jar'
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","/course-api-docker.jar"]
+####FROM openjdk:8u151-jdk
+####ADD /target/course-api-docker.jar course-api-docker.jar
+####RUN bash -c 'touch /course-api-docker.jar'
+####EXPOSE 8080
+####ENTRYPOINT ["java","-jar","/course-api-docker.jar"]
 ### configuration is almost finish we can add other dependencies depending  our application
 
 5. Now open terminal(if we have windowa machine then open git cli) navigate your project location
 ##Before running the command there must be mavan, docker and openjdk(manage home directory for jdk) installed on our machine
  
-$ mvn install
-$  docker images
+##### mvn install
+#####$  docker images
 => it will images on our docker
-$  docker build -f Dockerfile -t docker-spring-boot1 .
+#####$  docker build -f Dockerfile -t docker-spring-boot1 .
 => it will create docker images
-$  docker images
+#####$  docker images
 => list all available images on our machine
-$  docker run -p 8080:8080 docker-spring-boot1
+#####$  docker run -p 8080:8080 docker-spring-boot1
 => running our docker images with viewing logs when you are going to exit form your terminal application is immidiatly  stop
-$  docker run -d -p 8080:8080 docker-spring-boot1
-=> running our application backgroun with out viewing log.
+#####$  docker run -d -p 8080:8080 docker-spring-boot1
+=> running our application backgroun with out viewing log. you can see your aplication using your browser
 
 ##Git command for push to the master and dont forgate to 
 …or create a new repository on the command line
