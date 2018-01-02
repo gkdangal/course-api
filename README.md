@@ -33,26 +33,26 @@
 	</build>
 4. we have to create Docker file and add these command
 
-####FROM openjdk:8u151-jdk
-####ADD /target/course-api-docker.jar course-api-docker.jar
-####RUN bash -c 'touch /course-api-docker.jar'
-####EXPOSE 8080
-####ENTRYPOINT ["java","-jar","/course-api-docker.jar"]
-### configuration is almost finish we can add other dependencies depending  our application
+5. ####FROM openjdk:8u151-jdk
+6. ####ADD /target/course-api-docker.jar course-api-docker.jar
+7. ####RUN bash -c 'touch /course-api-docker.jar'
+8. ####EXPOSE 8080
+9. ####ENTRYPOINT ["java","-jar","/course-api-docker.jar"]
+10. ### configuration is almost finish we can add other dependencies depending  our application
 
-5. Now open terminal(if we have windowa machine then open git cli) navigate your project location
+11. Now open terminal(if we have windowa machine then open git cli) navigate your project location
 ##Before running the command there must be mavan, docker and openjdk(manage home directory for jdk) installed on our machine
  
 ##### mvn install
-#####$  docker images
+12. $  docker images
 => it will images on our docker
-#####$  docker build -f Dockerfile -t docker-spring-boot1 .
+13. $  docker build -f Dockerfile -t docker-spring-boot1 .
 => it will create docker images
-#####$  docker images
+14. $  docker images
 => list all available images on our machine
-#####$  docker run -p 8080:8080 docker-spring-boot1
+15. $  docker run -p 8080:8080 docker-spring-boot1
 => running our docker images with viewing logs when you are going to exit form your terminal application is immidiatly  stop
-#####$  docker run -d -p 8080:8080 docker-spring-boot1
+16. $  docker run -d -p 8080:8080 docker-spring-boot1
 => running our application backgroun with out viewing log. you can see your aplication using your browser
 
 ##Git command for push to the master and dont forgate to 
