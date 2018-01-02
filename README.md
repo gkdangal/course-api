@@ -4,14 +4,14 @@
 -We already know how to create a project on sts using spring boot.
 # I am ging to mension what are the dependencies packages on 
 - We need Two dependencies packages to run spring boot application on docker
-1. <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-tomcat -->
+1.  https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-tomcat<!-- -->
 		<dependency>
     			<groupId>org.springframework.boot</groupId>
     			<artifactId>spring-boot-starter-tomcat</artifactId>
     			<version>1.5.9.RELEASE</version>
 		</dependency>
 		
-2. <!-- https://mvnrepository.com/artifact/tomcat/jasper-runtime -->
+2.  https://mvnrepository.com/artifact/tomcat/jasper-runtime<!-- -->
 		<dependency>
     			<groupId>tomcat</groupId>
     			<artifactId>jasper-runtime</artifactId>
@@ -59,11 +59,17 @@
 …or create a new repository on the command line
 
 ###echo "# course-api" >> README.md
-###git init
-###git add README.md
-###git commit -m "first commit"
-###git remote add origin https://github.com/gkdangal/course-api.git
-###git push -u origin master
+<!-- -->
+git init
+<!-- -->
+git add README.md
+<!-- -->
+git commit -m "first commit"
+<!-- -->
+git remote add origin https://github.com/gkdangal/course-api.git
+<!-- -->
+git push -u origin master
+<!-- -->
 ###…or push an existing repository from the command line
 
 ###git remote add origin https://github.com/gkdangal/course-api.git
